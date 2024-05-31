@@ -31,9 +31,18 @@ zinit ice depth "1"
 zinit light givensuman/appa-zsh-theme
 ```
 
+### Customizing
+You can change the prompt icon and color by modifying `APPA_ZSH_THEME_PROMPT_COLOR` and `APPA_ZSH_THEME_PROMPT_ICON` environment variables, such as adding this to your `~/.zshrc`
+
+```shell
+export APPA_ZSH_THEME_PROMPT_COLOR="yellow"
+export APPA_ZSH_THEME_PROMPT_ICON="$"
+```
+
 ### License
 You know the drill, do whatever you want with this.
 
 ### Appa
 Named after my cutie-patootie dog, Appa
+
 ![20220531_173716(0)](https://github.com/givensuman/appa-zsh-theme/assets/16063606/8c184107-78dd-4c0c-86eb-4dc270601987)

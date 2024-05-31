@@ -9,6 +9,7 @@
 #
 setopt prompt_subst
 
+
 # Load required modules
 #
 autoload -Uz vcs_info
@@ -64,7 +65,7 @@ precmd() {
 
 # Define prompts
 #
-PROMPT="%(?.%F{magenta}.%F{red})%f " # Display a red prompt char on failure
+PROMPT="%(?.%F{$APPA_ZSH_THEME_PROMPT_COLOR:-magenta}.%F{red})${APPA_ZSH_THEME_PROMPT_ICON:-}%f " # Display a red prompt char on failure
 RPROMPT="%F{8}${SSH_TTY:+%n@%m}%f"    # Display username if connected via SSH
 
 # ------------------------------------------------------------------------------
