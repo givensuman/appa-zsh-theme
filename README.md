@@ -13,7 +13,8 @@ The screenshot above uses the [SFMono Nerd Font](https://github.com/shaunsingh/S
 #### Oh-My-Zsh
 Run the following command
 ```shell
-git clone https://github.com/givensuman/appa-zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom/}themes
+git clone https://github.com/givensuman/appa-zsh-theme
+cp appa-zsh-theme/appa.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
 ```
 and add `ZSH_THEME="appa"` to your `~/.zshrc`
 
