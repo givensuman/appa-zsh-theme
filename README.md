@@ -1,5 +1,7 @@
 ### a tidy lil zsh theme
 
+_As seen on [Awesome](https://github.com/unixorn/awesome-zsh-plugins)!_
+  
 It's based on the [refined](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/refined.zsh-theme) theme built into the Oh-My-Zsh framework. And by "based" I mean I copied the file and made a few tweaks to my liking. I can't find that theme's author, but full credit goes to them. This theme is also, by the transitive property, based off of the [Pure](https://github.com/sindresorhus/pure) theme by Sindre Sorhus and the [nicoulaj](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/nicoulaj.zsh-theme) theme by Julien Nicoulaud. It's zsh themes all the way down, baby.
 
 Requires a patched [Nerd Font](https://github.com/ryanoasis/nerd-fonts) for proper icon rendering.
