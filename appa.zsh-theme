@@ -34,7 +34,6 @@ git_dirty() {
 
 # Display information about the current repository
 #
-
 repo_information() {
   echo "\033[1;34m${vcs_info_msg_0_%%/.}\033[0m \033[2;32m$vcs_info_msg_1_$(git_dirty)\033[0m $vcs_info_msg_2_%f"
 }
