@@ -47,8 +47,9 @@ cmd_exec_time() {
     [ $elapsed -gt 5 ] && echo "\033[2;33mtook  ${elapsed}s\033[0m "
 }
 
+# Display information about the virtual environment and override default 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-virtualenv_prompt_info() {
+venv_information() {
   [[ -n ${VIRTUAL_ENV} ]] || return
   echo "\033[2;35mvia  $(basename $VIRTUAL_ENV)\033[0m "
 }
@@ -62,7 +63,7 @@ preexec() {
 precmd() {
     setopt localoptions nopromptsubst
     vcs_info # Get version control info before we start outputting stuff
-    print -P "\n$(dir_information)$(repo_information)$(virtualenv_prompt_info)$(cmd_exec_time)"
+    print -P "\n$(dir_information)$(repo_information)$(venv_information)$(cmd_exec_time)"
     unset cmd_timestamp # Reset cmd exec time
 }
 
