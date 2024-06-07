@@ -13,13 +13,13 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable hg bzr git
 zstyle ':vcs_info:*:*' unstagedstr '!'
 zstyle ':vcs_info:*:*' stagedstr '+'
-zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "in  %b" "%%u%c"
+zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%b" "%%u%c"
 zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%s:%b" "%u%c (%a)"
 zstyle ':vcs_info:*:*' nvcsformats "%~" "" ""
 
 # Display information about the current working directory
 dir_information() {
-  echo "\033[1;34m${vcs_info_msg_0_%%/.}\033[0m"
+  echo "\033[1;34m${vcs_info_msg_0_%%/.}\033[0m "
 }
 
 # Fastest possible way to check if repo is dirty
@@ -32,7 +32,11 @@ git_dirty() {
 
 # Display information about the current repository
 repo_information() {
-  echo "\033[2;32m$vcs_info_msg_1_$(git_dirty)\033[0m%f"
+  if [ -z "$vcs_info_msg_1_" ]; then
+    return
+  fi
+
+  echo "\033[2;32min  $vcs_info_msg_1_$(git_dirty)\033[0m%f "
 }
 
 # Displays the exec time of the last command if set threshold was exceeded
@@ -40,7 +44,13 @@ cmd_exec_time() {
     local stop=`date +%s`
     local start=${cmd_timestamp:-$stop}
     let local elapsed=$stop-$start
-    [ $elapsed -gt 5 ] && echo "\033[2;33mtook  ${elapsed}s\033[0m"
+    [ $elapsed -gt 5 ] && echo "\033[2;33mtook  ${elapsed}s\033[0m "
+}
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+virtualenv_prompt_info() {
+  [[ -n ${VIRTUAL_ENV} ]] || return
+  echo "\033[2;35mvia  $(basename $VIRTUAL_ENV)\033[0m "
 }
 
 # Get the initial timestamp for cmd_exec_time
@@ -52,7 +62,7 @@ preexec() {
 precmd() {
     setopt localoptions nopromptsubst
     vcs_info # Get version control info before we start outputting stuff
-    print -P "\n$(dir_information) $(repo_information) $(cmd_exec_time)"
+    print -P "\n$(dir_information)$(repo_information)$(virtualenv_prompt_info)$(cmd_exec_time)"
     unset cmd_timestamp # Reset cmd exec time
 }
 
