@@ -6,9 +6,9 @@ It's based on the [refined](https://github.com/ohmyzsh/ohmyzsh/blob/master/theme
 
 Adds version control, virtual environment, and command execution time information to your prompt. Requires a patched [Nerd Font](https://github.com/ryanoasis/nerd-fonts) for proper icon rendering.
 
-![appatheme](https://github.com/givensuman/appa-zsh-theme/assets/16063606/8564a4ef-0a1b-44c7-bcaa-15d6991ad753)
+![appazsh](https://github.com/user-attachments/assets/39861b58-ade3-4cb5-b556-c9af9c5c619d)
 
-The screenshot above uses the [SFMono Nerd Font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized), and the [tokyo-night](https://github.com/zatchheems/tokyo-night-alacritty-theme) Alacritty theme. The [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugin is also being featured.
+The screenshot above uses the [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack), and the [Catppuccin](https://github.com/catppuccin/alacritty) Alacritty theme. The [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugin is also being featured.
 
 ### Installing
 
