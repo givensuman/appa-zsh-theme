@@ -27,7 +27,7 @@ git_dirty() {
   # Check if we're in a git repo
   command git rev-parse --is-inside-work-tree &>/dev/null || return
   # Check if it's dirty
-  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo ""
+  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo " 󰓦"
 }
 
 # Display information about the current repository
@@ -68,7 +68,7 @@ precmd() {
 }
 
 # Define prompts
-ICON=${APPA_ZSH_THEME_PROMPT_ICON:-""}
+ICON=${APPA_ZSH_THEME_PROMPT_ICON:-"󰄛"}
 COLOR=${APPA_ZSH_THEME_PROMPT_COLOR:-"blue"}
 PROMPT="%(?.%F{${COLOR}}.%F{red})${ICON}%f " # Display a red prompt char on failure
 RPROMPT="%F{8}${SSH_TTY:+%n@%m}%f" # Display username if connected via SSH
