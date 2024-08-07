@@ -12,7 +12,7 @@ The screenshot above uses the [Hack Nerd Font](https://github.com/ryanoasis/nerd
 
 ### Installing
 
-To install this, just put source the theme file in your ~/.zshrc
+To install this, just put source the theme file in your `~/.zshrc`
 
 ```shell
 source /path/to/appa.zsh-theme
