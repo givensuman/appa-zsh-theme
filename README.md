@@ -2,17 +2,17 @@
 
 _As seen on [Awesome](https://github.com/unixorn/awesome-zsh-plugins)!_
 
-It's based on the [refined](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/refined.zsh-theme) theme built into the Oh-My-Zsh framework. And by "based" I mean I copied the file and made a few tweaks to my liking. I can't find that theme's author, but full credit goes to them. This theme is also, by the transitive property, based off of the [Pure](https://github.com/sindresorhus/pure) theme by Sindre Sorhus and the [nicoulaj](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/nicoulaj.zsh-theme) theme by Julien Nicoulaud. It's zsh themes all the way down, baby.
+It's based on the [refined](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/refined.zsh-theme) theme built into the Oh-My-Zsh framework. I can't find that theme's author, but they did dmost of the work. This theme is also, by the transitive property, based off of the [Pure](https://github.com/sindresorhus/pure) theme by Sindre Sorhus and the [nicoulaj](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/nicoulaj.zsh-theme) theme by Julien Nicoulaud. It's zsh themes all the way down, baby.
 
 Adds version control, virtual environment, and command execution time information to your prompt. Requires a patched [Nerd Font](https://github.com/ryanoasis/nerd-fonts) for proper icon rendering.
 
 ![appazsh](https://github.com/user-attachments/assets/39861b58-ade3-4cb5-b556-c9af9c5c619d)
 
-The screenshot above uses the [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack), and the [Catppuccin](https://github.com/catppuccin/alacritty) Alacritty theme. The [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugin is also being featured.
+The screenshot above uses the [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack), and the [Catppuccin](https://github.com/catppuccin/alacritty) Alacritty theme. The [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) plugin is also being featured.
 
 ### Installing
 
-To install this, just put source the theme file in your `~/.zshrc`
+To install this, just source the theme file in your `~/.zshrc`
 
 ```shell
 source /path/to/appa.zsh-theme
